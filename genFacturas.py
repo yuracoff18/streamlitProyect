@@ -7,7 +7,7 @@ def genFactura(nombre, cantidad, precio, modelo):
         with open("facturas/"+nombre+ ".txt", "a") as fac:
             fac.write(
 f"""======================
-Empresa: Piesitos
+Empresa: Piecitos
 Fecha: {date.today()}
 Hora: {datetime.now().hour}:{datetime.now().minute}
                     
@@ -26,7 +26,7 @@ Valor total: {precioConCantidad + (precioConCantidad* 0.19)}
         with open("facturas/"+nombre+".txt", "w") as fac:
             fac.write(
 f"""======================
-Empresa: Piesitos
+Empresa: Piecitos
 Fecha: {date.today()}
 Hora: {datetime.now().hour}:{datetime.now().minute}
                     

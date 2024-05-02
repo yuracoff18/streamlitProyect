@@ -17,7 +17,7 @@ st.divider()
 
 cantidad = st.number_input("Cantidad:", 1, 10, 1, 1)
 if cantidad and medida:
-    st.write(f"Precio total esperado: {genTalla(medida)[1]}")
+    st.write(f"Precio total esperado: {genTalla(medida)[1] * cantidad}")
 st.divider()
 
 col1, col2, col3, col4, col5 = st.columns(5)
