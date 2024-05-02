@@ -27,7 +27,7 @@ with col1:
 with col3:
     if st.button("Comprar", use_container_width=True):
         genFactura(nombre, cantidad,genTalla(medida)[1], modelo)
-        st.rerun()
+        st.switch_page("pages\compra.py")
         
 with col5:
     initial = 0
