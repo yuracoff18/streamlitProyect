@@ -21,6 +21,7 @@ Valor sin IVA: {precioConCantidad}
 Valor total: {precioConCantidad + (precioConCantidad* 0.19)}
 ======================
 """)
+            fac.close()
             
     except:
         with open("facturas/"+nombre+".txt", "w") as fac:
@@ -40,3 +41,10 @@ Valor sin IVA: {precioConCantidad}
 Valor total: {precioConCantidad + (precioConCantidad* 0.19)}
 ======================
     """)
+            fac.close()
+
+def genInfo(nombre, cantidad, precio, modelo):
+    with open("actual_info/info.txt", "w") as arch:
+        arch.write(f"{nombre},{cantidad},{precio},{modelo}")
+        arch.close()
+        

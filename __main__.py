@@ -3,12 +3,13 @@ from st_pages import *
 
 show_pages([
     Page("__main__.py", "Home"),
-    Page("pages\compra.py", "Compra")
+    Page("pages/compra.py", "Compra"),
+    Page("pages/factura.py", "factura")
 ])
 
 hide_pages([
-    "Compra"
-    
+    "Compra",
+    "factura"
     ])
 
 def main():

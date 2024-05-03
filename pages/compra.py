@@ -1,7 +1,20 @@
 import streamlit as st
+from st_pages import *
 from tallas import genTalla
-from genFacturas import genFactura
+from genFacturas import genFactura, genInfo
 import os
+
+
+show_pages([
+    Page("__main__.py", "Home"),
+    Page("pages/compra.py", "Compra"),
+    Page("pages/factura.py", "factura")
+])
+
+hide_pages([
+    "Home",
+    "factura"
+    ])
 
 st.write("<div style='text-align:center'><h1>Sección de compra</h1></div>", unsafe_allow_html=True)
 
@@ -27,7 +40,8 @@ with col1:
 with col3:
     if st.button("Comprar", use_container_width=True):
         genFactura(nombre, cantidad,genTalla(medida)[1], modelo)
-        st.switch_page("__main__.py")
+        genInfo(nombre, cantidad,genTalla(medida)[1], modelo)
+        st.switch_page("pages/factura.py")
         
 with col5:
     initial = 0
